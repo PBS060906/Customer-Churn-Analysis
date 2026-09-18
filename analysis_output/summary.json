@@ -1,0 +1,175 @@
+{
+  "n_total": 7043,
+  "n_churn": 1869,
+  "churn_rate": 0.2653698707936959,
+  "best_params": {
+    "LogisticRegression": {
+      "C": 10.0
+    },
+    "RandomForest": {
+      "class_weight": "balanced",
+      "max_depth": 10,
+      "min_samples_leaf": 5
+    },
+    "GradientBoosting": {
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "n_estimators": 100
+    },
+    "XGBoost": {
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "n_estimators": 200,
+      "subsample": 0.9
+    }
+  },
+  "thresholds": {
+    "LogisticRegression": 0.565,
+    "RandomForest": 0.5049999999999999,
+    "GradientBoosting": 0.285,
+    "XGBoost": 0.3
+  },
+  "final_model": "RandomForest",
+  "rf_top10": {
+    "tenure": 0.1817,
+    "TotalCharges": 0.1346,
+    "Contract_Two year": 0.1184,
+    "MonthlyCharges": 0.0882,
+    "InternetService_Fiber optic": 0.0775,
+    "PaymentMethod_Electronic check": 0.056,
+    "Contract_One year": 0.0438,
+    "OnlineSecurity_Yes": 0.0373,
+    "TechSupport_Yes": 0.023,
+    "TechSupport_No internet service": 0.0204
+  },
+  "lr_top10_risk": {
+    "InternetService_Fiber optic": 2.398,
+    "StreamingMovies_Yes": 0.892,
+    "StreamingTV_Yes": 0.867,
+    "MultipleLines_Yes": 0.562,
+    "TotalCharges": 0.52,
+    "PaymentMethod_Electronic check": 0.398,
+    "PaperlessBilling_Yes": 0.333,
+    "DeviceProtection_Yes": 0.275
+  },
+  "lr_top10_protect": {
+    "MonthlyCharges": -1.972,
+    "Contract_Two year": -1.446,
+    "tenure": -1.185,
+    "MultipleLines_No phone service": -1.164,
+    "Contract_One year": -0.728,
+    "PhoneService_Yes": -0.39,
+    "InternetService_No": -0.351,
+    "OnlineSecurity_No internet service": -0.351
+  },
+  "test_metrics": [
+    {
+      "model": "LogisticRegression",
+      "threshold": 0.5,
+      "kind": "default",
+      "accuracy": 0.7374,
+      "balanced_acc": 0.7521,
+      "precision": 0.5034,
+      "recall": 0.7834,
+      "f1": 0.613,
+      "roc_auc": 0.8408,
+      "ks": 0.5224
+    },
+    {
+      "model": "LogisticRegression",
+      "threshold": 0.56,
+      "kind": "tuned",
+      "accuracy": 0.7594,
+      "balanced_acc": 0.7526,
+      "precision": 0.5338,
+      "recall": 0.738,
+      "f1": 0.6195,
+      "roc_auc": 0.8408,
+      "ks": 0.5224
+    },
+    {
+      "model": "RandomForest",
+      "threshold": 0.5,
+      "kind": "default",
+      "accuracy": 0.7544,
+      "balanced_acc": 0.7637,
+      "precision": 0.5251,
+      "recall": 0.7834,
+      "f1": 0.6288,
+      "roc_auc": 0.8447,
+      "ks": 0.5463
+    },
+    {
+      "model": "RandomForest",
+      "threshold": 0.5,
+      "kind": "tuned",
+      "accuracy": 0.7559,
+      "balanced_acc": 0.7638,
+      "precision": 0.5271,
+      "recall": 0.7807,
+      "f1": 0.6293,
+      "roc_auc": 0.8447,
+      "ks": 0.5463
+    },
+    {
+      "model": "GradientBoosting",
+      "threshold": 0.5,
+      "kind": "default",
+      "accuracy": 0.7956,
+      "balanced_acc": 0.6969,
+      "precision": 0.6547,
+      "recall": 0.4866,
+      "f1": 0.5583,
+      "roc_auc": 0.8465,
+      "ks": 0.5372
+    },
+    {
+      "model": "GradientBoosting",
+      "threshold": 0.28,
+      "kind": "tuned",
+      "accuracy": 0.7516,
+      "balanced_acc": 0.7635,
+      "precision": 0.5212,
+      "recall": 0.7888,
+      "f1": 0.6277,
+      "roc_auc": 0.8465,
+      "ks": 0.5372
+    },
+    {
+      "model": "XGBoost",
+      "threshold": 0.5,
+      "kind": "default",
+      "accuracy": 0.8041,
+      "balanced_acc": 0.7173,
+      "precision": 0.6633,
+      "recall": 0.5321,
+      "f1": 0.5905,
+      "roc_auc": 0.8461,
+      "ks": 0.5294
+    },
+    {
+      "model": "XGBoost",
+      "threshold": 0.3,
+      "kind": "tuned",
+      "accuracy": 0.7473,
+      "balanced_acc": 0.7537,
+      "precision": 0.5162,
+      "recall": 0.7674,
+      "f1": 0.6172,
+      "roc_auc": 0.8461,
+      "ks": 0.5294
+    }
+  ],
+  "ks": {
+    "LogisticRegression": 0.5224,
+    "RandomForest": 0.5463,
+    "GradientBoosting": 0.5372,
+    "XGBoost": 0.5294
+  },
+  "roc_auc": {
+    "LogisticRegression": 0.8408,
+    "RandomForest": 0.8447,
+    "GradientBoosting": 0.8465,
+    "XGBoost": 0.8461
+  }
+}

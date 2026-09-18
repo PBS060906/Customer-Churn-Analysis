@@ -1,0 +1,5 @@
+model,cv_roc_auc,params
+LogisticRegression,0.8460180509353071,"{""C"": 10.0}"
+RandomForest,0.8466500768550195,"{""class_weight"": ""balanced"", ""max_depth"": 10, ""min_samples_leaf"": 5}"
+GradientBoosting,0.8481798745152521,"{""learning_rate"": 0.05, ""max_depth"": 3, ""n_estimators"": 100}"
+XGBoost,0.8482862442146084,"{""learning_rate"": 0.05, ""max_depth"": 3, ""n_estimators"": 200, ""subsample"": 0.9}"
